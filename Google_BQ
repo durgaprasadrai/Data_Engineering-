@@ -1,0 +1,24 @@
+--CLUSTER BY
+CREATE TABLE mydataset.clustered_table
+(
+  customer_id STRING,
+  transaction_amount NUMERIC
+)
+CLUSTER BY
+  customer_id
+AS (
+  SELECT * FROM mydataset.unclustered_table
+);
+-- Without query 
+CREATE TABLE mydataset.myclusteredtable
+(
+  timestamp TIMESTAMP,
+  customer_id STRING,
+  transaction_amount NUMERIC
+)
+PARTITION BY DATE(timestamp)
+CLUSTER BY customer_id
+OPTIONS (
+  partition_expiration_days=3,
+  description="a table clustered by customer_id"
+)
