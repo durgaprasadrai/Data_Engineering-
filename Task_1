@@ -1,0 +1,74 @@
+#SQL DML 
+
+create table stg_market_data(
+     Open varchar(20),
+     High varchar(20),
+     Low varchar(20),
+     Close varchar(20),
+     Adj Close varchar(20),
+     Volume varchar(20),
+     Date date
+
+)
+
+create table fact_market_data(
+     Open varchar(20),
+     High varchar(20),
+     Low varchar(20),
+     Close varchar(20),
+     Adj Close varchar(20),
+     Volume varchar(20),
+     Date date
+
+)
+
+# Python code for data ingestions 
+
+import numpy as np
+import awswrangler as wr
+import boto3
+import pandas as pd
+import pyarrow
+import requests
+
+import yfinance as yf
+
+# Get the data for the stock AAPL from free available API  
+df_final = yf.download('AAPL','2024-01-01','2024-06-01')
+
+parsed_event_path = 's3://market_data/working/'
+
+#creating s3 Session 
+s3_session = boto3.Session(aws_access_key_id=access_key, aws_secret_access_key=secret_key)
+
+#Making null as -1 
+
+df_final[['Open','High', 'Low','Close','Adj Close','Volume']] = df_final[['Open','High', 'Low','Close','Adj Close','Volume']].fillna(-1)
+
+#awswrangler to write data to data landing area (here i have used s3 , may be gcp storage etc. )
+
+wr.s3.to_parquet(
+     df=df_final,
+     path=parsed_event_path,
+     dataset=True,
+     boto3_session=s3_session,
+     compression='snappy'
+ )
+
+#copy data to aws redshift table 
+
+copy_options = "format as PARQUET"
+copy_event = """
+                TRUNCATE TABLE staging.{table};
+                 COPY staging.{table}
+                 FROM '{s3_loc}'
+                 with credentials
+                 'aws_access_key_id={access_key};aws_secret_access_key={secret_key}'
+                 {copy_options};
+             """.format(
+                             table='stg_market_data',
+                             s3_loc=parsed_event_path,
+                             access_key=access_key,
+                             secret_key=secret_key,
+                             copy_options=copy_options)
+s3_session.run(copy_event, autocommit=True)
