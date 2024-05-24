@@ -1,0 +1,31 @@
+For 			Resources 
+Data ware house 			https://medium.com/nerd-for-tech/fundamental-data-modeling-and-data-warehousing-b599183d998a
+Pyspark			https://www.youtube.com/playlist?list=PLxy0DxWEupiNjGSv1hzRFBXgSzV-bZu94
+pysaprk s3		https://www.youtube.com/watch?v=YoAgyoie5kI	https://www.youtube.com/watch?v=AzbPeJmbw2U
+pysaprk s3			https://sparkbyexamples.com/spark/write-read-csv-file-from-s3-into-dataframe/
+pyspark csv data processing 			https://www.youtube.com/watch?v=uz3LybMH7II
+Pyspark interview questions			https://www.youtube.com/playlist?list=PLxy0DxWEupiODTF_xM5Lw1ghc0XtLCUhC
+RDD pyspark			https://www.analyticsvidhya.com/blog/2021/10/a-comprehensive-guide-to-pyspark-rdd-operations/
+SQL			https://datalemur.com/sql-tutorial/sql-rank-dense_rank-row_number-window-function
+1nf ,2nf , 3nf			https://www.guru99.com/database-normalization.html
+SCD			https://www.datacamp.com/tutorial/mastering-slowly-changing-dimensions-scd
+Bigquery			https://mindmajix.com/bigquery-interview-questions
+AWS Glue			https://www.youtube.com/watch?v=dQnRP6X8QAU
+Airflow trigger rule 			https://medium.com/@tusharhatwar785/airflow-trigger-rules-a-comprehensive-guide-c34ee3ea5e3e
+Airflow interview 			https://www.projectpro.io/article/airflow-interview-questions-and-answers/685
+Practice pandas online 			https://www.w3resource.com/python-exercises/pandas/index/index.php
+Airflow concept 			https://www.youtube.com/watch?v=vfDB9fpH4tI
+xcom 			https://www.youtube.com/watch?v=8veO7-SN5ZY
+event based dag trigger 			https://www.youtube.com/watch?v=8uKW0mPWmCk
+other option			https://airflowsummit.org/slides/2022/l2-EventBased-KentenDanas.pdf
+Airflow sensors			https://www.youtube.com/watch?v=fgm3BZ3Ubnw
+deferrable operator in airflow 			https://docs.astronomer.io/learn/deferrable-operators
+redshift- Question 			https://datavalley.ai/amazon-redshift-interview-questions-and-answers/
+python questions 			Atomic Engineering youtube
+Spark			https://www.youtube.com/watch?v=4JP0XqsjwCI&t=28s
+BQ partition 			https://medium.com/@amanchoudhary_99120/partitioning-in-big-query-2d427f50e676
+BQ interview 			https://www.youtube.com/watch?v=u50fUMzUWfw
+BQ semi struct data			https://www.youtube.com/watch?v=OqAO7ajD9PE
+practice python 			https://app.dataquest.io/m/1008/variables-and-data-types-practice-problems/2/helping-alice-compute-her-gpa
+BQ query			https://marquin-space-object-storage-01.sgp1.cdn.digitaloceanspaces.com/web-resources/htmls/Working%20with%20JSON,%20Arrays,%20and%20Structs%20in%20BigQuery%20_%20Qwiklabs%20%282021-03-01%209_38_05%20am%29.html
+BQ data governence 			https://medium.com/google-cloud/data-security-and-governance-with-gcp-bq-42bf651e346a
