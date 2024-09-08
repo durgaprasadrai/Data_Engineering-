@@ -1,3 +1,4 @@
+#Remote Change!
 #standardSQL
 SELECT
 ['raspberry', 'blackberry', 'strawberry', 'cherry'] AS fruit_array
