@@ -1,7 +1,6 @@
-#Remote Change!
 #standardSQL
 SELECT
-['raspberry', 'blackberry', 'strawberry', 'cherry'] AS fruit_array
+['raspberrys', 'blackberry', 'strawberry', 'cherry'] AS fruit_array
 
 
 #standardSQL
